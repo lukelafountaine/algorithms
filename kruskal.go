@@ -32,12 +32,9 @@ func createsCycle(components []int, node1, node2 int) bool {
 }
 
 func connectComponents(components []int, node1, node2 int) {
-	new := components[node1-1]
-	old := components[node2-1]
-
 	for i := range components {
-		if components[i] == old {
-			components[i] = new
+		if components[i] == components[node2-1] {
+			components[i] = components[node1-1]
 		}
 	}
 }
