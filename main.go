@@ -9,6 +9,12 @@ import (
 )
 
 func main() {
+	//run_kruskals()
+	sequence := []int{0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15}
+	fmt.Println(longestIncreasingSub(sequence))
+}
+
+func run_kruskals() {
 
 	// verify number of command line args
 	if len(os.Args) < 2 {
