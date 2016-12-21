@@ -4,7 +4,7 @@ import (
 	"sort"
 )
 
-func kruskal(edges []Edge, dim int) []Edge {
+func Kruskal(edges []Edge, dim int) []Edge {
 
 	sort.Sort(ByWeight(edges))
 

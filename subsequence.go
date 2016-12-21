@@ -1,6 +1,6 @@
 package main
 
-func longestIncreasingSub(nums []int) int {
+func LongestIncreasingSub(nums []int) int {
 
 	if len(nums) < 2 {
 		return len(nums)
