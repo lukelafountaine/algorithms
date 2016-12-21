@@ -9,8 +9,8 @@ func kruskal(edges []Edge, dim int) []Edge {
 	sort.Sort(ByWeight(edges))
 
 	// create the slice of connected components
-	components := make([]int, dim*dim)
-	for i := 0; i < dim*dim; i++ {
+	components := make([]int, dim * dim)
+	for i := 0; i < dim * dim; i++ {
 		components[i] = i
 	}
 
@@ -28,13 +28,13 @@ func kruskal(edges []Edge, dim int) []Edge {
 }
 
 func createsCycle(components []int, node1, node2 int) bool {
-	return components[node1-1] == components[node2-1]
+	return components[node1 - 1] == components[node2 - 1]
 }
 
 func connectComponents(components []int, node1, node2 int) {
 	for i := range components {
-		if components[i] == components[node2-1] {
-			components[i] = components[node1-1]
+		if components[i] == components[node2 - 1] {
+			components[i] = components[node1 - 1]
 		}
 	}
 }
